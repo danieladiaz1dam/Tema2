@@ -21,7 +21,7 @@ public class Ejer5 {
 		// Variable indice
 		int index = 0;
 		// Variable para guardar el input del usuario
-		int input;
+		int input = 0;
 		// Variable scanner
 		Scanner sc = new Scanner(System.in);
 
@@ -32,11 +32,17 @@ public class Ejer5 {
 			// Guardar el input
 			input = sc.nextInt();
 			
+			// Si es positivo
 			if (input > 0)
+				// Añadir valor a la suma de los positivos
 				sumaPositivos += input;
+			// Si es 0
 			else if (input == 0)
-				contadorCeros += 1;
+				// Añadir +1 al contador de los 0s
+				contadorCeros++;
+			// Si es negativo
 			else {
+				// Añadir +1 al contador de negativos y añadir el valor a la suma de negativos
 				contadorNegativo++;
 				sumaNegativos += input;
 			}
@@ -47,8 +53,11 @@ public class Ejer5 {
 		
 		// Imprimir todo
 		System.out.printf("La suma de los numeros positivos es: %d\n", sumaPositivos);
-		System.out.printf("La media de los numeros negativos es de %d\n", sumaNegativos/contadorNegativo);
 		System.out.printf("La cantidad de ceros introducida es de %d\n", contadorCeros);
+		if (contadorNegativo <= 0)
+			System.out.printf("No hay suficientes numeros negativos para hacer la media.");
+		else
+			System.out.printf("La media de los numeros negativos es de %d\n", sumaNegativos/contadorNegativo);
 		
 		// Cerrar scanner
 		sc.close();

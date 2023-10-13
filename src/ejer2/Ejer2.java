@@ -24,12 +24,12 @@ public class Ejer2 {
 
 		// Pedir numero hasat que se introduzac uno negativo
 		while (input >= 0) {
+			// Añadir al contador
+			contador += 1;
 			// Pedir numero al usuario
 			System.out.printf("Introduce un numero: ");
 			// Guardar el numero
 			input = sc.nextInt();
-			// Añadir al contador
-			contador += 1;
 		}
 
 		// Imprimir la suma total

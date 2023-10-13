@@ -28,20 +28,24 @@ public class Ejer6 {
 		input = sc.nextInt();
 
 		while (input > 0) {
-			// Preuntar edad al usuario
-			System.out.printf("Alumno #%d, introduzca su edad: ", cantAlumnos + 1);
-			// Guardar el input
-			input = sc.nextInt();
-
 			sumaEdad += input;
 			cantAlumnos++;
 			if (input >= 18)
 				cantMayorEdad++;
+
+			// Preuntar edad al usuario
+			System.out.printf("Alumno #%d, introduzca su edad: ", cantAlumnos + 1);
+			// Guardar el input
+			input = sc.nextInt();
 		}
 
 		System.out.printf("\nLa suma de las edades da un total de %d años.\n", sumaEdad);
-		System.out.printf("Hay un total de %d alumnos,\nde los cuales %d son mayores de edad.", cantAlumnos,
-				cantMayorEdad);
+		System.out.printf("Hay un total de %d alumnos,\n", cantAlumnos);
+		System.out.printf("de los cuales %d son mayores de edad.\n", cantMayorEdad);
+		if (cantAlumnos <= 0)
+			System.out.printf("No hay alumnos suficientes para hacer una media.");
+		else
+			System.out.printf("La media de las edades de los alumnos es de %d años.", sumaEdad / cantAlumnos);
 
 		// Cerrar scanner
 		sc.close();

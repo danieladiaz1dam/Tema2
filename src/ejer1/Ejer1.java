@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class Ejer1 {
 	public static void main(String[] args) {
 		// Varaible para ir guardando la cuenta
-		int contador = 0;
+		int suma = 0;
 		// Variable para el input del usuario
 		int input = 0;
 		// Variable scanner
@@ -27,7 +27,7 @@ public class Ejer1 {
 		while (input >= 0) {
 			// añadir input anterior al contador, lo pongo 
 			// arriba para no sumarle un numero negativo
-			contador += input;
+			suma += input;
 			// Pedir numero al usuario
 			System.out.printf("Introduce un numero: ");
 			// Guardar el numero
@@ -35,7 +35,7 @@ public class Ejer1 {
 		}
 
 		// Imprimir la suma total
-		System.out.printf("La suma total es de %d.", contador);
+		System.out.printf("La suma total es de %d.", suma);
 
 		// Cerrar scanner
 		sc.close();
