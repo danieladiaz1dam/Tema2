@@ -31,13 +31,13 @@ public class Ejer3 {
 		boolean opcionValida = true;
 		// Variable scanner
 		Scanner sc = new Scanner(System.in);
-		
+
 		// Pedir los dos numeros al usuario
 		System.out.print("Introduce un numero: ");
 		num1 = sc.nextFloat();
 		System.out.print("Introduce otro numero: ");
 		num2 = sc.nextFloat();
-		
+
 		// Imprimir el menu al usuario
 		System.out.println("\n" + "#".repeat(33));
 		System.out.println(String.format("# %29s #", "Que quieres hacer con ellos?:"));
@@ -48,33 +48,39 @@ public class Ejer3 {
 		System.out.println(String.format("# %-29s #", "4) Dividirlos"));
 		System.out.println(String.format("# %29s #", ""));
 		System.out.println("#".repeat(33));
-		
+
 		// Guardar la opcion
 		opcion = sc.nextByte();
-		
+
 		// Calcular el resultado segun la opcion
-		switch(opcion) {
+		switch (opcion) {
 		case 1:
-			res = num1+num2;
+			res = num1 + num2;
 			break;
 		case 2:
-			res = num1-num2;
+			res = num1 - num2;
 			break;
 		case 3:
-			res = num1*num2;
+			res = num1 * num2;
 			break;
 		case 4:
-			res = num1/num2;
+			if (num2 != 0)
+				res = num1 / num2;
+			else {
+				opcionValida = false;
+				System.out.println("No se puede dividir entre 0");
+			}
 			break;
 		default:
 			System.out.println("Opcion invalida");
 			opcionValida = false;
-		};
-		
+		}
+		;
+
 		// Imprimir el resultado si la opcion era valida
 		if (opcionValida)
 			System.out.println(String.format("El resultado es %.2f.", res));
-		
+
 		// Cerrar scanner
 		sc.close();
 	}
