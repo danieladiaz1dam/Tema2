@@ -74,8 +74,7 @@ public class Ejer3 {
 		default:
 			System.out.println("Opcion invalida");
 			opcionValida = false;
-		}
-		;
+		};
 
 		// Imprimir el resultado si la opcion era valida
 		if (opcionValida)

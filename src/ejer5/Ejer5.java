@@ -38,8 +38,10 @@ public class Ejer5 {
 		default -> { yield "Invalido"; }
 		};
 		
+		// Si no es valido, mostrarlo
 		if (vehiculo.equals("Invalido"))
 				System.out.println("La letra introducida no es valida");
+		// Si es valido, imprimir a que vehiculo corresponde
 		else
 			System.out.printf("La letra %s corresponde a %s", letra, vehiculo);
 		
